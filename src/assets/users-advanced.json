@@ -1,0 +1,34 @@
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "emails": [
+      { "email": "john.doe@example.com", "isDefault": true },
+      { "email": "j.doe@work.com", "isDefault": false }
+    ],
+    "phones": [
+      { "phone": "123-456-7890", "isDefault": true },
+      { "phone": "098-765-4321", "isDefault": false }
+    ],
+    "addresses": [
+      {
+        "street": "123 Main St",
+        "city": "Anytown",
+        "zip": "12345",
+        "country": "USA",
+        "isDefault": true
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "emails": [
+      { "email": "jane.smith@example.com", "isDefault": true }
+    ],
+    "phones": [
+      { "phone": "555-555-5555", "isDefault": true }
+    ],
+    "addresses": []
+  }
+]

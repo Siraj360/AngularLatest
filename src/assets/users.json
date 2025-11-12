@@ -1,0 +1,32 @@
+
+[
+  {
+    "id": 1,
+    "name": "John Doe",
+    "emails": [
+      { "type": "personal", "email": "john.doe@example.com" },
+      { "type": "work", "email": "j.doe@work.com" }
+    ],
+    "phones": [
+      { "type": "cell", "number": "123-456-7890" },
+      { "type": "home", "number": "098-765-4321" }
+    ],
+    "addresses": [
+      { "type": "home", "street": "123 Main St", "city": "Anytown", "state": "CA", "zip": "12345", "default": true },
+      { "type": "work", "street": "456 Work Ave", "city": "Workville", "state": "CA", "zip": "67890", "default": false }
+    ]
+  },
+  {
+    "id": 2,
+    "name": "Jane Smith",
+    "emails": [
+      { "type": "personal", "email": "jane.smith@example.com" }
+    ],
+    "phones": [
+      { "type": "cell", "number": "555-555-5555" }
+    ],
+    "addresses": [
+      { "type": "home", "street": "789 Broadway", "city": "Someplace", "state": "NY", "zip": "54321", "default": true }
+    ]
+  }
+]
