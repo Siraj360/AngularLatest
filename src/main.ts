@@ -1,17 +1,10 @@
 import { bootstrapApplication } from '@angular/platform-browser';
+import { provideRouter, withHashLocation } from '@angular/router';
 import { AppComponent } from './app/app.component';
-import { appConfig } from './app/app.config';
-import { provideRouter } from '@angular/router';
-import { provideLocationStrategy } from '@angular/common';
-import { HashLocationStrategy } from '@angular/common';
 import { routes } from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
-  ...appConfig,
   providers: [
-    provideRouter(routes),
-    provideLocationStrategy(() => new HashLocationStrategy())  // ✅ use this
+    provideRouter(routes, withHashLocation())
   ]
-})
-.catch((err) => console.error(err));
-
+}).catch(err => console.error(err));
