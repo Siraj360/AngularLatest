@@ -1,4 +1,3 @@
-
 import { Routes } from '@angular/router';
 
 export const routes: Routes = [
@@ -10,18 +9,15 @@ export const routes: Routes = [
   {
     path: 'contact-book',
     loadComponent: () =>
-      import('./contact-book/contact-book.component').then(cmp => cmp.ContactBookComponent),
-    title: 'Contact Book - A Reactive Form'
+      import('./contact-book/contact-book.component').then(c => c.ContactBookComponent)
   },
-    {
+  {
     path: 'customer-info',
     loadComponent: () =>
-      import('./customer-info/customer-info.component').then(cmp => cmp.CustomerInfoComponent),
-    title: 'Contact Book - A Reactive Form'
+      import('./customer-info/customer-info.component').then(c => c.CustomerInfoComponent)
   },
   {
     path: '**',
     redirectTo: 'contact-book'
   }
 ];
-
