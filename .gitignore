@@ -1,0 +1,48 @@
+# Angular build output
+/dist
+/out-tsc
+/.angular
+/.angular/cache
+
+# Node
+/node_modules
+npm-debug.log
+yarn-error.log
+package-lock.json*
+pnpm-lock.yaml
+bun.lockb
+
+# Temp files
+/tmp
+/temp
+/.sass-cache
+/connect.lock
+/coverage
+/.cache
+
+# IDE files
+.vscode/*
+!.vscode/settings.json
+!.vscode/tasks.json
+!.vscode/launch.json
+!.vscode/extensions.json
+
+.idea/
+*.suo
+*.ntvs*
+*.njsproj
+*.sln
+*.sw*
+
+# OS generated
+.DS_Store
+Thumbs.db
+
+# Environment files
+/src/environments/environment*.ts
+/src/environments/*.local.ts
+
+# Misc
+*.log
+*.tgz
+*.zip

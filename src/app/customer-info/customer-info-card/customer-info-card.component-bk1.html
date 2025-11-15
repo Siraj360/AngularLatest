@@ -1,0 +1,19 @@
+<div class="card h-100 shadow-sm">
+  <div class="row g-0">
+    <div class="col-md-4">
+      <img [ngSrc]="customer().picture || 'https://via.placeholder.com/150'" class="img-fluid rounded-start" [alt]="customer().first + ' ' + customer().last" width="128" height="128">
+    </div>
+    <div class="col-md-8">
+      <div class="card-body">
+        <h5 class="card-title">{{ customer().title }}. {{ customer().first }} {{ customer().last }}</h5>
+        <h6 class="card-subtitle mb-2 text-muted">{{ customer().email }}</h6>
+        <p class="card-text mb-1">
+          <i class="fas fa-map-marker-alt me-2"></i>{{ customer().address1 }}, {{ customer().address2 }}
+        </p>
+        <p class="card-text">
+          <i class="fas fa-phone me-2"></i>{{ customer().phone }}
+        </p>
+      </div>
+    </div>
+  </div>
+</div>
