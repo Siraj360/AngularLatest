@@ -4,10 +4,8 @@ import { RouterModule } from '@angular/router';
 
 @Component({
   selector: 'app-root',
-  imports: [RouterModule],
-  template: `
-    <router-outlet></router-outlet>
-  `,
+    imports: [RouterModule],
+  templateUrl: './app.component.html',   // use the HTML file
   styleUrls: ['./app.component.scss'],
   changeDetection: ChangeDetectionStrategy.OnPush,
 })

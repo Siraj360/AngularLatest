@@ -1,21 +1,20 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter, withHashLocation } from '@angular/router';
-import { provideHttpClient } from '@angular/common/http'; // <-- 1. Import this
-
+import { provideHttpClient } from '@angular/common/http';
 import { AppComponent } from './app/app.component';
 import { routes } from './app/app.routes';
 import { provideZoneChangeDetection } from '@angular/core';
 
 bootstrapApplication(AppComponent, {
   providers: [
-    // Your existing router fix for GitHub Pages
+    // Router provider with hash location
     provideRouter(routes, withHashLocation()), 
     
-    // <-- 2. Add the HttpClient provider here
+    // HTTP client provider
     provideHttpClient(),
     
-    provideZoneChangeDetection({ eventCoalescing: true }), 
-    
-    provideRouter(routes),
+    // Optional performance tweak
+    provideZoneChangeDetection({ eventCoalescing: true })
   ]
 }).catch(err => console.error(err));
+
