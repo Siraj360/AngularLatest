@@ -1,10 +1,16 @@
 import { bootstrapApplication } from '@angular/platform-browser';
 import { provideRouter, withHashLocation } from '@angular/router';
+import { provideHttpClient } from '@angular/common/http'; // <-- 1. Import this
+
 import { AppComponent } from './app/app.component';
 import { routes } from './app/app.routes';
 
 bootstrapApplication(AppComponent, {
   providers: [
-    provideRouter(routes, withHashLocation())
+    // Your existing router fix for GitHub Pages
+    provideRouter(routes, withHashLocation()), 
+    
+    // <-- 2. Add the HttpClient provider here
+    provideHttpClient() 
   ]
 }).catch(err => console.error(err));
