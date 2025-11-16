@@ -1,1 +1,34 @@
-<router-outlet></router-outlet>
+<!-- app.component.html -->
+
+<!-- HEADER -->
+<nav class="navbar navbar-expand-lg navbar-light bg-light shadow-sm">
+  <div class="container-fluid">
+    <!-- Left: Icon + Title + Badge -->
+    <a class="navbar-brand d-flex align-items-center" href="#">
+      <i class="fas fa-lightbulb me-2"></i> <!-- Appropriate icon -->
+      <span class="me-2">Latest Angular</span>
+      <span class="badge bg-secondary">with code</span>
+    </a>
+
+    <!-- Right: Links -->
+    <div class="d-flex ms-auto">
+      <a class="nav-link d-flex align-items-center" [routerLink]="'/contact-book'">
+        <i class="fas fa-address-book me-1"></i> Contact Book
+      </a>
+      <a class="nav-link d-flex align-items-center ms-3" [routerLink]="'/customer-info'">
+        <i class="fas fa-user me-1"></i> Customer Info
+      </a>
+    </div>
+  </div>
+</nav>
+
+<!-- MAIN CONTENT -->
+<!-- <div class="container my-4"> -->
+  <router-outlet></router-outlet>
+<!-- </div> -->
+
+<!-- FOOTER -->
+<footer class="bg-light text-center py-3 border-top">
+  All rights reserved &copy; www.Siraj360.com
+</footer>
+
